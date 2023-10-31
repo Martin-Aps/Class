@@ -8,6 +8,8 @@ Choice_Number = input("\nEnter desired number: ")
 
 #***************************   Main Code   ***************************
 from statistics import mean
+import random
+
 #****************   App 1   ****************
 if Choice_Number == "1":
     num1=1
@@ -33,15 +35,12 @@ elif Choice_Number == "4":
 
 #****************   App 5   ****************
 elif Choice_Number == "5":
-    
     User_input=int(input('Please Enter Numbers (-1 at End): '))
     Numbers_List=[User_input]
-
     while True:
         if User_input>0:
             User_input=int(input('Please Enter Numbers (-1 at End): '))
             Numbers_List.append(User_input)
-        
         elif User_input<0 :
             Numbers_List.remove(-1)
             break
@@ -50,11 +49,9 @@ elif Choice_Number == "5":
 
 #****************   App 6   ****************
 elif Choice_Number == "6":
-    import random
-
     Game_List=['Stone','Paper','Scissor']
     Comp_Choice=random.choice(Game_List)
-    User_Choice=input("Please Select from Stone Papaer Scissor: ")
+    User_Choice=input("Please Select from Stone Papaer Scissor: ").capitalize()
     print(f'You Choice--->{User_Choice}')
     print(f'Comp Choice--->{Comp_Choice}')
     if User_Choice in Game_List:
@@ -76,7 +73,6 @@ elif Choice_Number == "6":
             print('****You Win!****')
         elif User_Choice==Game_List[2] and Comp_Choice==Game_List[2]:
             print('****Tie!****')
-        
     else:
         print('Make a Mikstake!')
         
