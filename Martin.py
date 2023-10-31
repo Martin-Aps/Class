@@ -7,7 +7,7 @@ for Line_Number in range(len(Content)):
 Choice_Number = input("\nEnter desired number: ")
 
 #***************************   Main Code   ***************************
-
+from statistics import mean
 #****************   App 1   ****************
 if Choice_Number == "1":
     num1=1
@@ -33,7 +33,20 @@ elif Choice_Number == "4":
 
 #****************   App 5   ****************
 elif Choice_Number == "5":
-    print("ok")
+    
+    User_input=int(input('Please Enter Numbers (-1 at End): '))
+    Numbers_List=[User_input]
+
+    while True:
+        if User_input>0:
+            User_input=int(input('Please Enter Numbers (-1 at End): '))
+            Numbers_List.append(User_input)
+        
+        elif User_input<0 :
+            Numbers_List.remove(-1)
+            break
+    print(f'Max of Numbers: {max(Numbers_List)} \nMin of Numbers: {min(Numbers_List)} \nAverage of Numbers: {mean(Numbers_List)}')
+
 
 #****************   App 6   ****************
 elif Choice_Number == "6":
@@ -70,4 +83,4 @@ elif Choice_Number == "6":
 
 #****************   App 7   ****************
 elif Choice_Number == "7":
-    print("ok")    
+    print("Under Construction! :)))))")    
