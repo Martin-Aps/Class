@@ -61,9 +61,9 @@ elif Choice_Number == "3":
                     print("ok")
                     break
         else:
-            print("add dorost")
+            print("Wrong!")
     except:
-        print("Dorost")
+        print("Be Careful!")
 
 #****************   App 4   ****************
 elif Choice_Number == "4":
