@@ -23,15 +23,59 @@ if Choice_Number == "1":
     
 #****************   App 2   ****************    
 elif Choice_Number == "2":
-        print("ok")
+        
+    try:
+        Numbers=[]
+        Max_num=int(input("Please Enter Max Number: "))
+        for n in range(2,Max_num+1):
+            is_prime=True
+            for m in range(2,n):
+                if n % m ==0:
+                    is_prime=False
+                    break
+            if is_prime:
+                Numbers.append(n)
+        print(Numbers)
+    
+    except:
+        print("Make a Mistake ") 
 
 #****************   App 3   ****************
 elif Choice_Number == "3":
-    print("ok")
+    try:
+        Number=int(input("Select a Number from 100 to 10.000: "))
+        Score=1000
+        if 100<=Number<=10000 :
+            while Score>0:
+                Guess=random.randint(100,10001)
+                print(Guess)
+                if Guess > Number:
+                    print("boro pain")
+                    Score -=1
+                    print(Score)
+                if Guess < Number:
+                    print("boro bala")
+                    Score -=1
+                    print(Score)
+                if Guess==Number:
+                    print("ok")
+                    break
+        else:
+            print("add dorost")
+    except:
+        print("Dorost")
 
 #****************   App 4   ****************
 elif Choice_Number == "4":
-    print("ok")
+    URL=input('URL: ')
+    Url_Split=URL.split(":")
+
+    print(f'Schem: {Url_Split[0]}')
+    URL=URL.replace('http://',"").replace('https://',"")
+    URL=URL.replace('www.',"")
+    Url_Split=URL.split(".")
+    print(f'Domain: {Url_Split[0]}')
+    print(f'Extention: {Url_Split[1]}')
 
 #****************   App 5   ****************
 elif Choice_Number == "5":
